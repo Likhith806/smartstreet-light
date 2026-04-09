@@ -38,8 +38,7 @@ A full-stack web application to monitor and control smart street lights using in
 ## 📂 Project Structure
 
 ```text
-smart-light/
-│
+
 ├── src/
 │   └── main/
 │       ├── java/
