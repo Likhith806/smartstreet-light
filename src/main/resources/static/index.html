@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Street Light Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 🔐 LOGIN CHECK -->
+    <script>
+        if(!localStorage.getItem("loggedIn")) {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="overlay">
+
+    <h1 class="title">🌃 Smart Street Light Dashboard</h1>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Total Lights</h3>
+            <p id="total">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Avg Brightness</h3>
+            <p id="avg">0</p>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button onclick="addLight()">⚡ Add Light</button>
+        <button onclick="refreshLights()">🔄 Refresh</button>
+        <button onclick="clearAll()">🗑 Clear All</button>
+        <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <!-- Lights -->
+    <div class="card">
+        <h2>Live Lights</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- 📊 Chart -->
+    <div class="card">
+        <h2>Brightness Chart 📊</h2>
+        <canvas id="chart"></canvas>
+    </div>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
